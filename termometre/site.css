@@ -97,7 +97,7 @@ padding:16px;
 visibility:visible;
 
 animation: fadeintoast 0.5s, fadeouttoast 0.5s 2.5s;
--webkit-animation: fadeintoast 0.5s, fadeouttoast 0.5s 2.5s;
+-webkit-animation: fadeintoast 0.5s, fadeouttoast 0.5s 4.5s;
 
 }
 
