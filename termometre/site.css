@@ -1,0 +1,129 @@
+@charset "UTF-8";
+h1,
+h2 {
+    text-shadow: 2px 2px 4px #000
+}
+p {
+    font-family: Rajdhani, sans-serif
+}
+body {
+    color: #000;
+    background-color: #d3d3d3;
+    background: lightgray;
+    text-align: center
+
+}
+h1 {
+    color: #00f;
+    font-family: Montserrat, sans-serif;
+    animation: fadein 1s
+}
+h2 {
+    color: green;
+    animation: fadein 1s .5s
+}
+.cachestatus,
+head {
+    color: red
+}
+.change {
+    border-left: 6px solid green;
+    background: #0f0;
+    background: linear-gradient(to right, #0f0, #d3d3d3)
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9
+}
+.gizli {
+    display: none
+}
+.kutu {
+    margin: 10px;
+    border: 4px solid #00f;
+    padding: 10px;
+    box-shadow: 2px 2px 4px #000
+}
+button,
+input[type=button] {
+    font-family: Rajdhani, sans-serif;
+    border-radius: 10px;
+    background: linear-gradient(white, #d3d3d3);
+    box-shadow: 2px 2px 4px #000;
+    animation: fadein 1s .5s
+    
+}
+button:hover,
+input[type=button]:hover {
+    font-family: Rajdhani, sans-serif;
+    background: linear-gradient(white, gray);
+    box-shadow: 2px 2px 4px #000;
+    animation: fadein 1s .5s
+    
+}
+:focus {
+
+}
+@keyframes fadein {
+    from {
+	
+        opacity: 0;
+       
+    }
+    to {
+	
+        opacity: 1;
+        
+    }
+}
+
+#alert{
+visibility:hidden;
+margin-left:-140px;
+background-color:#333;
+color:#fff;
+text-align:center;
+min-width:250px;
+left:50%;
+bottom:30px;
+z-index:3;
+position:fixed;
+padding:16px;
+}
+
+#alert.show{
+
+visibility:visible;
+
+animation: fadeintoast 0.5s, fadeouttoast 0.5s 2.5s;
+-webkit-animation: fadeintoast 0.5s, fadeouttoast 0.5s 2.5s;
+
+}
+
+@-webkit-keyframes fadeouttoast {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@-webkit-keyframes fadeintoast {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeintoast{
+from {bottom:0;opacity:0;}
+to {bottom:30px;opacity:1;}
+}
+
+@keyframes fadeouttoast{
+from {bottom:30px;opacity:1;}
+to {bottom:0;opacity:0;}
+}
+
+@media print {
+    body,
+    html {
+        display: none
+    }
+}

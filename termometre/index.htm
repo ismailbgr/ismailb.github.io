@@ -1,0 +1,141 @@
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-title" content="Termometre Hesapla">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="initial-scale = 1.1, user-scalable = no">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  
+
+<!--script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script-->
+
+<!--link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"-->
+<link rel="stylesheet" type="text/css" href="http://ismailb.tk/termometre/site.css">
+
+<script>
+function belirle(){
+
+
+hesapla()
+ 
+}
+
+ function hesapla(){
+
+ var k1 = document.getElementById("1kaynama").value;
+var do1 = document.getElementById("1donma").value;
+var de1 = document.getElementById("1derece").value;
+var ka2 = document.getElementById("2kaynama").value;
+var do2 = document.getElementById("2donma").value;
+//var sonuc = document.getElementById("sonuc").innerHTML;
+ 
+var islem1 = de1 - do1
+console.log(islem1)
+var islem2 = k1 - do1
+console.log(islem2)
+var islem3 = islem1 / islem2
+console.log(islem3)
+var islem4 = ka2 - do2
+console.log(islem4)
+var islem5 = islem3 * islem4
+console.log(islem5)
+var islem6 = Number(islem5) + Number(do2)
+console.log(islem6)
+
+sonuc = islem6
+
+document.getElementById("alert").innerHTML = sonuc
+
+toast()
+
+
+//document.getElementById("sonuc").innerHTML = islem6
+
+
+
+}
+</script>
+
+<script id="loadscript">
+
+function loadingok(){
+function showcontent(){
+$("#content").slideToggle(1000);
+ }
+
+ setTimeout(showcontent,3000)
+$("#loadingtext").slideToggle(100);
+$("#loadscript").remove();
+toast();
+}
+</script>
+<style>
+
+#loadingbox{
+border-style: solid;border-color: red green blue yellow;border-width: 5px;animation:loadingbox 2s , loadingbox2 1s 2s; ;margin-left: auto;margin-right: auto; 
+
+}
+
+@keyframes loadingbox{
+from {border-color: black;transform: rotate(0deg);max-width:20px;max-height:20px;min-width:20px;min-height:20px}
+to {border-color: red green blue yellow;transform: rotate(1800deg);max-width:20px;max-height:20px;min-width:20px;min-height:20px}
+
+}
+
+@keyframes loadingbox2{
+from {max-width:20px;max-height:20px;min-width:20px;min-height:20px}
+to {max-width:100%;max-height:100%;min-width:20px;min-height:20px}
+}
+
+
+</style>
+</head>
+<body onload="loadingok()">
+<div id="loading">
+
+
+<h2 id="loadingtext" style="display: block;">Yükleniyor...</h2>
+</div>
+
+<div id="loadingbox">
+<div id="content" class="gizli"> 
+<button onclick="location.reload(true);" style="text-align:left;">Yenile</button>
+<h1>Esnek Termometre Hesap Makinesi</h2>
+
+<h3>Birinci Termometrenin Kaynaması:</h3><input type="text" id="1kaynama"></input>
+<h3>Birinci Termometrenin Donması:</h3><input type="text" id="1donma"></input>
+<h3>Birinci Termometrenin Derecesi:</h3><input type="text" id="1derece"></input>
+<h3>İkinci Termometrenin Kaynaması:</h3><input type="text" id="2kaynama"></input>
+<h3>İkinci Termometrenin Donması:</h3><input type="text" id="2donma"></input>
+
+
+<button onclick="belirle()">Hesapla</button>
+
+
+<h1>By İsmail Buğra ÖZ</h2>
+<script>
+
+
+function toast() {
+
+    var x = document.getElementById("alert")
+
+
+    x.className = "show";
+
+   
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+
+
+</div>
+</div>
+<div id="alert">Sayfa'nın Tamamı Yüklendi</div>
+</body>
+</html>
