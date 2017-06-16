@@ -10,11 +10,23 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  
 <link rel="stylesheet" type="text/css" href="site.css" />
 <script>
+window.onload=function(){
 function goster(){
 $("#content").slideToggle(1000);
 }
+function toast() {
 
+    var x = document.getElementById("alert")
+
+
+    x.className = "show";
+
+   
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+}
 setTimeout(goster,3000);
+toast();
+}
 </script>
 </head>
 <body>
@@ -24,5 +36,6 @@ setTimeout(goster,3000);
 <button onclick="window.location = 'termometre'">Esnek Termometre Hesaplayıcı</button>
 </div>
 </div>
+<div id="alert">Ana Ekrana Eklemek İçin: IOS'de Paylaş Menüsünden Android Chrome'da Menü Den Ana Ekrana Ekle Tuşuna Basabilirsiniz</div>
 </body>
 </html>
