@@ -7,9 +7,22 @@
 <meta http-equiv="pragma" content="no-cache" />
 <meta charset="UTF-8">
 <meta name="viewport" content="initial-scale = 1.1, user-scalable = no">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  
+<link rel="stylesheet" type="text/css" href="site.css" />
+<script>
+function goster(){
+$("#content").slideToggle(1000);
+}
+
+setTimeout(goster,3000);
+</script>
 </head>
 <body>
+<div id="loadingbox">
+<div id="content" class="gizli">
 <h1>İsmailb Tools</h1>
 <button onclick="window.location = 'termometre'">Esnek Termometre Hesaplayıcı</button>
+</div>
+</div>
 </body>
 </html>
