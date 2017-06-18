@@ -1,3 +1,9 @@
+h1 {
+    color: #00f;
+    font-family: Montserrat, sans-serif;
+    animation: fadein 1s
+
+}
 #loadingbox{
 border-style: solid;border-color: red green blue yellow;border-width: 5px;animation:loadingbox 2s , loadingbox2 1s 2s; ;margin-left: auto;margin-right: auto; 
 text-align:center;
