@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 h1 {
     color: #00f;
-    font-family: Montserrat, sans-serif;
     animation: fadein 1s
 
 }
@@ -13,6 +13,7 @@ text-align:center;
 body{
 	
 	background-color:lightgray;
+	font-family: 'Inconsolata', monospace;
 }
 
 .gizli{
