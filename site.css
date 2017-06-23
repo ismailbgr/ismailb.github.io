@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 h1 {
     color: #00f;
+	text-shadow: 2px 2px 4px #000;
     animation: fadein 1s
 
 }
@@ -36,17 +37,24 @@ to {max-width:100%;max-height:100%;min-width:20px;min-height:20px}
 button,
 input[type=button] {
     font-family: Rajdhani, sans-serif;
-    border-radius: 10px;
-    background: linear-gradient(white, #d3d3d3);
-    box-shadow: 2px 2px 4px #000;
+    -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  -webkit-box-shadow: 4px 4px 8px #666666;
+  -moz-box-shadow: 4px 4px 8px #666666;
+  box-shadow: 4px 4px 8px #666666;
+  color: #ffffff;
+  background: #d1d1d1;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
     animation: fadein 1s .5s
     
 }
 button:hover,
 input[type=button]:hover {
     font-family: Rajdhani, sans-serif;
-    background: linear-gradient(white, gray);
-    box-shadow: 2px 2px 4px #000;
+    background: #9c9c9c;
+  text-decoration: none
     animation: fadein 1s .5s
     
 }
