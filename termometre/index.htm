@@ -78,7 +78,12 @@ $("#content").slideToggle(1000);
  setTimeout(showcontent,3000)
 $("#loadingtext").slideToggle(100);
 $("#loadscript").remove();
+if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone == true) {
+
+}else{
 toast();
+}
+
 }
 </script>
 <style>
@@ -115,11 +120,11 @@ to {max-width:100%;max-height:100%;min-width:20px;min-height:20px}
 <button onclick="location.reload(true);" style="text-align:left;">Yenile</button>
 <h1>Esnek Termometre Hesap Makinesi</h2>
 
-<h3>Birinci Termometrenin Kaynaması:</h3><input type="text" id="1kaynama"></input>
-<h3>Birinci Termometrenin Donması:</h3><input type="text" id="1donma"></input>
-<h3>Birinci Termometrenin Derecesi:</h3><input type="text" id="1derece"></input>
-<h3>İkinci Termometrenin Kaynaması:</h3><input type="text" id="2kaynama"></input>
-<h3>İkinci Termometrenin Donması:</h3><input type="text" id="2donma"></input>
+<h3>Birinci Termometrenin Kaynaması:</h3><input type="number" id="1kaynama"></input>
+<h3>Birinci Termometrenin Donması:</h3><input type="number" id="1donma"></input>
+<h3>Birinci Termometrenin Derecesi:</h3><input type="number" id="1derece"></input>
+<h3>İkinci Termometrenin Kaynaması:</h3><input type="number" id="2kaynama"></input>
+<h3>İkinci Termometrenin Donması:</h3><input type="number" id="2donma"></input>
 
 
 <button onclick="belirle()">Hesapla</button>
@@ -131,6 +136,9 @@ to {max-width:100%;max-height:100%;min-width:20px;min-height:20px}
 
 function toast() {
 
+if(document.getElementById("alert").innerHTML == "NaN"){
+document.getElementById("alert").innerHTML = "Sonuç Bir Sayı Değil"
+}
     var x = document.getElementById("alert")
 
 
